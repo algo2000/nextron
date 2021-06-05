@@ -6,7 +6,7 @@ import { theme } from "../lib/theme";
 import type { AppProps } from "next/app";
 import MainLayout from "../layouts/MainLayout";
 
-export default function (props: AppProps) {
+export default function App(props: AppProps) {
   const { Component, pageProps } = props;
 
   React.useEffect(() => {
