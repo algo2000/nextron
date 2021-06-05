@@ -1,22 +1,52 @@
 import React, { ReactNode, useState } from "react";
+import Link from "next/link";
 
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import { default as MenuIcon } from "@material-ui/icons/Menu";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Drawer from "@material-ui/core/Drawer";
+import { OverridableComponent } from "@material-ui/core/OverridableComponent";
+import { SvgIconTypeMap } from "@material-ui/core/SvgIcon";
+
+import MenuIcon from "@material-ui/icons/Menu";
+import HomeIcon from "@material-ui/icons/Home";
+import AssessmentIcon from "@material-ui/icons/Assessment";
+import SearchIcon from "@material-ui/icons/Search";
+
 import ContentsSection from "./ContentsSection";
+
+import { default as S } from "./style";
 
 type props = {
   children: ReactNode;
 };
 
-const MenuList = {};
+type TMenu = {
+  title: string;
+  uri: string;
+  icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>;
+};
+
+const MenuList: TMenu[] = [
+  {
+    title: "홈",
+    uri: "/",
+    icon: HomeIcon,
+  },
+  {
+    title: "분석",
+    uri: "/analysis",
+    icon: AssessmentIcon,
+  },
+  {
+    title: "조회",
+    uri: "/lookup",
+    icon: SearchIcon,
+  },
+];
 
 function MainLayout({ children }: props): JSX.Element {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -39,10 +69,13 @@ function MainLayout({ children }: props): JSX.Element {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {["Home", "Analysis"].map((text) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
+        {MenuList.map((element, index) => (
+          <Link href={element.uri} key={index}>
+            <S.MenuListItem button>
+              <element.icon color="primary" />
+              <ListItemText primary={element.title} color="primary" />
+            </S.MenuListItem>
+          </Link>
         ))}
       </List>
     </div>
