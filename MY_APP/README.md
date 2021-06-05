@@ -1,38 +1,60 @@
-<p align="center"><img src="https://i.imgur.com/flcMvDC.png"></p>
+# 소개
 
-## Usage
+Electron + Next
 
-### Create an App
+## 프로젝트 생성 방법
 
-```
-# with npx
-$ npx create-nextron-app my-app --example with-typescript-material-ui
+아래의 템플릿을 사용했습니다.
 
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript-material-ui
-
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript-material-ui
+```shell
+npx create-nextron-app MY_APP --example with-typescript-material-ui
 ```
 
-### Install Dependencies
+## Next 폴더 구조
 
+```text
+./
+├── assets
+├── components
+├── data
+├── hooks
+├── layouts
+├── libs
+├── pages
+├── public
+├── states
+├── styles
+└── theme
 ```
-$ cd my-app
 
-# using yarn or npm
-$ yarn (or `npm install`)
+- assets : icon 등 여러 에셋
+- components : 컴포넌트
+- data : 임시 json 데이터
+- hooks : 모든 커스텀 훅
+- layouts : 모든 레이아웃 컴포넌트
+- libs : 기능 메소드들 (axios 포함)
+- pages : 외부 노출 페이지
+- public : static 에셋
+- states : recoil 전역 상태
+- styles : 스타일
+- theme : 테마 스타일
 
-# using pnpm
-$ pnpm install --shamefully-hoist
-```
+# Commit message 컨벤션
 
-### Use it
+history를 트래킹 할 수 있도록 큰 이벤트마다 여러 번 구분하여 커밋하도록 합니다.
 
-```
-# development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
+> 핵심 가치는 `commit type`만으로 해당 커밋을 유추할 수 있어야 합니다.
 
-# production build
-$ yarn build (or `npm run build` or `pnpm run build`)
-```
+| type     | 내용                                                                   |
+| -------- | ---------------------------------------------------------------------- |
+| init     | hello, world 수준의 동작이 검증된 첫 파일을 추가할 때                  |
+| add      | 코드나 테스트, 예제, 문서 등의 추가가 있을 때                          |
+| del      | 파일 또는 코드, 리소스 제거                                            |
+| up       | 원래도 정상동작 하지만 추가 보안 하는 개념                             |
+| refactor | 코드 리팩토링 (변수명 수정 등) 기능에는 변함이 없어야합니다            |
+| style    | 코드 인덴트 변경으로 인한 코드 스타일 변경, 코드 자체 변경이 없는 경우 |
+| fix      | 올바르지 않은 동작을 고친 경우에                                       |
+| move     | 코드 및 파일의 이동이 있을 때                                          |
+| rename   | 파일명이 변경될 때                                                     |
+| package  | package.json 수정                                                      |
+| docs     | 문서 수정                                                              |
