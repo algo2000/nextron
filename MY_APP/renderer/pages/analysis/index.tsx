@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-function Next() {
+function AnalysisPage() {
   return (
     <React.Fragment>
       <Head>
@@ -13,4 +13,4 @@ function Next() {
   );
 }
 
-export default Next;
+export default AnalysisPage;
