@@ -6,9 +6,8 @@ function LookupPage() {
   return (
     <React.Fragment>
       <Head>
-        <title>Lookup - Nextron (with-typescript-material-ui)</title>
+        <title>Lookup</title>
       </Head>
-      <Link href="/next">to next</Link>
     </React.Fragment>
   );
 }

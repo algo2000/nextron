@@ -15,6 +15,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import AssessmentIcon from "@material-ui/icons/Assessment";
 import SearchIcon from "@material-ui/icons/Search";
+import SettingsIcon from "@material-ui/icons/Settings";
 
 import ContentsSection from "./ContentsSection";
 
@@ -45,6 +46,11 @@ const MenuList: TMenu[] = [
     title: "조회",
     uri: "/lookup",
     icon: SearchIcon,
+  },
+  {
+    title: "관리",
+    uri: "/management",
+    icon: SettingsIcon,
   },
 ];
 

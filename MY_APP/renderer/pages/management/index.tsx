@@ -2,14 +2,14 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-function AnalysisPage() {
+function ManagementPage() {
   return (
     <React.Fragment>
       <Head>
-        <title>Analysis</title>
+        <title>Management</title>
       </Head>
     </React.Fragment>
   );
 }
 
-export default AnalysisPage;
+export default ManagementPage;

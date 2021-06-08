@@ -1,15 +1,28 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
+import Grid from "@material-ui/core/Grid";
+import { Paper } from "@material-ui/core";
+import HomeLayout from "../layouts/HomeLayout";
 
 function HomePage() {
   return (
-    <React.Fragment>
+    <>
       <Head>
-        <title>Home - Nextron (with-typescript-material-ui)</title>
+        <title>Home</title>
       </Head>
-      <Link href="/next">to next</Link>
-    </React.Fragment>
+      <HomeLayout>
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+        <a>test</a>
+      </HomeLayout>
+    </>
   );
 }
 
