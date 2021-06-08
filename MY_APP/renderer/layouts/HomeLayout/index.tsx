@@ -7,16 +7,7 @@ type props = {
 
 function HomeLayout({ children }: props): JSX.Element {
   console.log(children);
-  return (
-    <Grid container justify="center" spacing={10}>
-      {children.map((element, index) => {
-        <Grid key={index} item>
-          {element}
-        </Grid>;
-      })}
-      {children}
-    </Grid>
-  );
+  return <Grid container justify="center" spacing={10}></Grid>;
 }
 
 export default HomeLayout;
