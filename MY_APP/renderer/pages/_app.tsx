@@ -5,6 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { theme } from "../lib/theme";
 import type { AppProps } from "next/app";
 import MainLayout from "../layouts/MainLayout";
+import GlobalStyle from "../styles/GlobalStyle";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -26,6 +27,7 @@ export default function App(props: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <GlobalStyle />
         <MainLayout>
           <Component {...pageProps} />
         </MainLayout>

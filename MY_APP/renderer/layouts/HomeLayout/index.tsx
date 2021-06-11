@@ -1,13 +1,13 @@
-import Grid from "@material-ui/core/Grid";
 import React, { ReactNode } from "react";
+
+import { default as S } from "./style";
 
 type props = {
   children: ReactNode;
 };
 
 function HomeLayout({ children }: props): JSX.Element {
-  console.log(children);
-  return <Grid container justify="center" spacing={10}></Grid>;
+  return <S.CardGrid>{children}</S.CardGrid>;
 }
 
 export default HomeLayout;

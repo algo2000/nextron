@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
-import Grid from "@material-ui/core/Grid";
-import { Paper } from "@material-ui/core";
+
 import HomeLayout from "../layouts/HomeLayout";
+
+import DailyStatusCard from "../components/DailyStatusCard";
 
 function HomePage() {
   return (
@@ -12,15 +12,9 @@ function HomePage() {
         <title>Home</title>
       </Head>
       <HomeLayout>
-        <a>test</a>
-        <a>test</a>
-        <a>test</a>
-        <a>test</a>
-        <a>test</a>
-        <a>test</a>
-        <a>test</a>
-        <a>test</a>
-        <a>test</a>
+        <DailyStatusCard />
+        <DailyStatusCard />
+        <DailyStatusCard />
       </HomeLayout>
     </>
   );
