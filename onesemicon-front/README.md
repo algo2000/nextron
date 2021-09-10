@@ -10,6 +10,12 @@ Electron + Next
 npx create-nextron-app onesemicon-front --example with-typescript-material-ui
 ```
 
+## Teams UI 패키지
+
+```
+npm i --save @fluentui/react-teams
+```
+
 ## Next 폴더 구조
 
 ```text
