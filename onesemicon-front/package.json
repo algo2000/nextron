@@ -11,6 +11,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@fluentui/react-teams": "^6.0.0-alpha.1",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.0.0"
   },
